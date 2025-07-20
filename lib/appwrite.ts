@@ -1,5 +1,13 @@
 import { CreateUserParams, SignInParams } from "@/type";
-import { Account, Avatars, Client, Databases, ID, Query } from "react-native-appwrite";
+import {
+  Account,
+  Avatars,
+  Client,
+  Databases,
+  ID,
+  Query,
+  Storage,
+} from "react-native-appwrite";
 
 export const appwriteConfig = {
   endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
@@ -7,6 +15,11 @@ export const appwriteConfig = {
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
   databaseId: "68762cd0003560ca6863",
   userCollectionId: "68762dc6003def6e2029",
+  categoriesCollectionId: "687a9ed6003c29907aef",
+  menuCollectionId: "687aa0090032175e28cc",
+  customizationsCollectionId: "687ad0f700019e6bea10",
+  menuCustomizationsCollectionId: "687ad2f7000ff994daac",
+  bucketId: "687ad44000038174aedd",
   // const val APPWRITE_PROJECT_ID = "68762a030024f6e211b1"
 
   // git clone https://github.com/appwrite/starter-for-android
@@ -23,6 +36,7 @@ client
 export const account = new Account(client);
 export const databases = new Databases(client);
 export const avatars = new Avatars(client);
+export const storage = new Storage(client);
 
 export const createUser = async ({
   email,
