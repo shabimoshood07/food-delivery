@@ -23,5 +23,13 @@
     "titleBar.inactiveBackground": "#21573299",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#215732"
+  "peacock.color": "#215732",
+  "editor.fontSize": 12,
+  "prettier.printWidth": 100,
+  "editor.wordWrap": "bounded",
+  "html.format.wrapAttributes": "auto",
+  "prettier.singleQuote": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.wordWrapColumn": 100,
+  "editor.wrappingIndent": "same"
 }
